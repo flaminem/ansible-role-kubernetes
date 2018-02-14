@@ -1,7 +1,8 @@
 ---
 - include_role:
     name: docker
-
+    #
+#TODO: remove nfs when we have set up a proper distributed filesystem 
 - name: Install required packages
   package: name="{{ item }}" state=latest update_cache=yes
   with_items:
